@@ -19,7 +19,8 @@ function CustomerList() {
         setCustomerData(customer);
       }
       catch(error) {
-        console.error("Error fetching customer data")
+        console.error("Error fetching customer data");
+        console.error(error);
       }
     };
     fetchCustomerData();

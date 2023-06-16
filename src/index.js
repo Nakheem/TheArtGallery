@@ -1,14 +1,13 @@
 import React from "react";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-
-import firebase from 'firebase/app';
-import "firebase/auth";
-import "firebase/firestore";
+import { FirebaseAppProvider } from "reactfire"
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 import App from "./App";
 
-import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -23,14 +22,18 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
+const auth = getAuth();
+const firestore = getFirestore();
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 root.render(
+<FirebaseAppProvider firebaseConfig={firebaseConfig} auth={auth} firestore={firestore}>
   <StrictMode>
     <App />
   </StrictMode>
+  </FirebaseAppProvider>
 );
