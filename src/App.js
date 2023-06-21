@@ -11,12 +11,12 @@ import 'firebase/compat/firestore';
 import 'firebase/compat/analytics';
 
 firebase.initializeApp({
-    apiKey: "AIzaSyAq_VWIfyLbCy4UV_XC2x7o66LVMy7Qp8g",
-    authDomain: "artgallery-81069.firebaseapp.com",
-    projectId: "artgallery-81069",
-    storageBucket: "artgallery-81069.appspot.com",
-    messagingSenderId: "356462073393",
-    appId: "1:356462073393:web:c821297b759d29d3322710"
+  apiKey: "AIzaSyCwDsatEbzT8rUqRlTgtxNlVflGDxklIWM",
+  authDomain: "chat-app-a6652.firebaseapp.com",
+  projectId: "chat-app-a6652",
+  storageBucket: "chat-app-a6652.appspot.com",
+  messagingSenderId: "42552667700",
+  appId: "1:42552667700:web:664a4dd227b1c0e88e2461"
 })
 
 const auth = firebase.auth();
